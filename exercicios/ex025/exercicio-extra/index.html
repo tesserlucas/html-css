@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Notas</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    
+</head>
+<body>
+    <h1>Cadastro de Nota de Aluno </h1>
+    <fieldset>
+        <legend>Nota do Aluno</legend>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <p>
+                <label for="inome">Nome do Aluno:</label>
+                <input type="text" name="nome" id="inome" required>
+            </p>
+            <p>
+                <label for="in1">Nota 1: </label>
+                <input type="number" name="n1" id="in1" required  oninput="calcularMedia(); verificarAprovacao() " >
+            </p>
+            <p>
+                <label for="in2">Nota 2: </label>
+                <input type="number" name="n2" id="in2" required oninput="calcularMedia(); verificarAprovacao()">
+            </p>
+            <p>
+                <label for="in3">Nota 3: </label>
+                <input type="number" name="n3" id="in3" required oninput="calcularMedia(); verificarAprovacao()">
+            </p>
+            <p>
+                <label for="imedia">Média: </label>
+                <output id="imedia">0</output>
+            <p>
+                <label for="isitu">Situação:</label>
+                <output id="isitu"></output>
+            </p>
+        </fieldset>
+            <p style="margin: 30px; margin-top: -10px;">
+                <input type="submit" value="Cadastrar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+        <script src="js/script.js"></script>
+</body>
+</html>
