@@ -1,1 +1,7 @@
 @charset "UTF-8";
+
+body {
+    background: url(../imagens/cev-landscape.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
